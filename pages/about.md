@@ -1,4 +1,4 @@
----
+<!-- ---
 title: About us
 metaDescription: This is a sample meta description. If one is not present in your page/post's front matter, the default metadata.description will be used instead.
 date: 2017-01-01T00:00:00.000Z
@@ -30,4 +30,4 @@ Podcasting operational change management inside of workflows to establish a fram
 
 ##### Regulatory convergence
 
-Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. -->

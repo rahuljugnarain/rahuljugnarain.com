@@ -7,16 +7,10 @@ eleventyNavigation:
   key: Home
   order: 0
 ---
-# Welcome
+# Hey I'm Rahul
 
-This is a template for building a simple blog website with the [Eleventy static site generator](https://www.11ty.dev), with deployment to [Netlify](https://www.netlify.com).
+Currently a PM at [Wise](https://wise.com/), living in London. 
 
-Includes [Decap CMS](https://www.decapcms.org) for WYSIWYG content editing, and [Netlify Forms](https://www.netlify.com/docs/form-handling) for processing your site's form data.
+Previously worked at [TrueLayer](https://truelayer.com/). 
 
-[Log in to the Decap CMS dashboard](/admin/)
-
-For more info on installation and usage, view the [project repo]({{ pkg.repository.url }}) on GitHub.
-
-Or click the button below to deploy your own copy of this project to Netlify.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/danurbanowicz/eleventy-netlify-boilerplate&stack=cms)
+You can contact me through [LinkedIn](https://www.linkedin.com/in/jugnarain/) or email me at rahuljugnarain@gmail.com.
