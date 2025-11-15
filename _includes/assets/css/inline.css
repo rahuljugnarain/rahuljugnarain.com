@@ -1,7 +1,7 @@
 :root {
-	--primary: blue;
+	--primary: #100F0F;
 	--secondary: white;
-	--background: #FFF0EB;
+	--background: ##FFFCF0;
 }
 
 *, *:before, *:after {
@@ -20,10 +20,18 @@ body {
 	height: 100vh;
 	grid-template-rows: auto 1fr auto;
 	background-color: var(--background);
+	justify-items: center;
+}
+
+header,
+main,
+footer {
+	max-width: 37.5em;
+	width: 100%;
 }
 
 main {
-	max-width: 37.5em;
+	margin: 0 auto;
 }
 
 p,
@@ -35,10 +43,7 @@ code {
 a[href],
 a[href]:visited {
 	color: var(--primary);
-}
-
-a[href]:not(:hover) {
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 img {
@@ -100,6 +105,10 @@ header nav ul :first-child {
 header nav li {
 	display: inline-block;
 	margin: 0 .25em;
+}
+
+header nav li:first-child {
+	margin-left: 0;
 }
 
 header nav li a {
