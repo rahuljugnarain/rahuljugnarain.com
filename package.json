@@ -30,5 +30,8 @@
     "luxon": "^3.7.1",
     "markdown-it-anchor": "^9.2.0",
     "uglify-js": "^3.19.3"
+  },
+  "dependencies": {
+    "@photogabble/eleventy-plugin-interlinker": "^1.1.2"
   }
 }

@@ -4,10 +4,14 @@ const UglifyJS = require("uglify-js");
 const htmlmin = require("html-minifier");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
-module.exports = function(eleventyConfig) {
+module.exports = async function(eleventyConfig) {
+  const interlinker = await import("@photogabble/eleventy-plugin-interlinker");
 
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+  // Interlinker plugin
+  eleventyConfig.addPlugin(interlinker.default);
 
   // Configuration API: use eleventyConfig.addLayoutAlias(from, to) to add
   // layout aliases! Say you have a bunch of existing content using
@@ -74,6 +78,8 @@ module.exports = function(eleventyConfig) {
     }
     return content;
   });
+
+  
 
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("favicon.ico");
