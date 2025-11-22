@@ -1,12 +1,11 @@
 ---
 title: My supplements
 metaDescription:
-date: 2025-11-21
-author: Rahul
-summary:
+date: 2025-11-15
+permalink: /supplements.html
+layout: layouts/page.njk
 tags:
   - health
-permalink: /supplements.html
 ---
 
 During the day:
