@@ -1,7 +1,15 @@
 :root {
 	--primary: #100F0F;
-	--secondary: white;
-	--background: ##FFFCF0;
+	--secondary: #F2F0E5;
+	--background: #FFFCF0;
+	--accent: #24837B;
+}
+
+html[data-theme="dark"] {
+	--primary: #CECDC3;
+	--secondary: #282726;
+	--background: #100F0F;
+	--accent: #3AA99F;
 }
 
 *, *:before, *:after {
@@ -19,6 +27,7 @@ body {
 	display: grid;
 	height: 100vh;
 	grid-template-rows: auto 1fr auto;
+	color: var(--primary);
 	background-color: var(--background);
 	justify-items: center;
 }
@@ -44,6 +53,10 @@ a[href],
 a[href]:visited {
 	color: var(--primary);
 	text-decoration: underline;
+}
+
+a[href]:hover {
+	color: var(--accent);
 }
 
 img {
@@ -93,9 +106,21 @@ header > em {
 }
 
 /* Header Nav */
+header nav {
+	width: 100%;
+}
+
+header nav .nav-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
 header nav ul {
 	padding: 0;
 	list-style: none;
+	margin: 0;
 }
 
 header nav ul :first-child {
@@ -121,7 +146,12 @@ header nav li a[href]:not(:hover) {
 }
 
 header nav li a[data-current="current item"] {
-	background-color: white;
+	background-color: var(--secondary);
+}
+
+header nav .nav-right {
+	display: flex;
+	align-items: center;
 }
 
 /* Posts List */
@@ -188,7 +218,7 @@ button {
 
 input,
 textarea {
-	border: 1px solid black;
+	border: 1px solid var(--secondary);
 }
 
 button {
@@ -196,6 +226,60 @@ button {
 	background-color: var(--primary);
 	color: var(--secondary);
 	cursor: pointer;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+	height: 20px;
+	width: 36px;
+	display: block;
+	position: relative;
+	border: none;
+	background: none;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+}
+
+.theme-toggle-slide {
+	height: 20px;
+	border: 1px solid var(--secondary);
+	border-radius: 24px;
+	width: 100%;
+	position: absolute;
+	inset: 0;
+}
+
+.theme-toggle-switch {
+	position: absolute;
+	z-index: 1;
+	top: 1px;
+	left: 1px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	transition: left 0.1s linear, background-color 0.2s ease;
+	background-color: var(--primary);
+	-webkit-mask-size: 18px;
+	-webkit-mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z' clip-rule='evenodd'/%3E%3C/svg%3E");
+	mask-size: 18px;
+	mask-position: center;
+	mask-repeat: no-repeat;
+	mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z' clip-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.theme-toggle:hover .theme-toggle-switch {
+	background-color: var(--accent);
+}
+
+html[data-theme="dark"] .theme-toggle-switch {
+	left: 16px;
+	background-color: var(--primary);
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z' /%3E%3C/svg%3E");
+	mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'%3E%3Cpath d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z' /%3E%3C/svg%3E");
+	transition: left 0.1s linear, background-color 0.2s ease;
 }
 
 @media screen and (min-width:768px) {

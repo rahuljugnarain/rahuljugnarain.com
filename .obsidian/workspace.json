@@ -200,6 +200,8 @@
   },
   "active": "80eea1d7b51fe16f",
   "lastOpenFiles": [
+    "_includes/components/theme-toggle.njk",
+    "_includes/assets/js/theme-toggle.js",
     "pages/notes.md",
     "pages/home.md",
     "pages/contact.md",
@@ -217,7 +219,6 @@
     "_site/template/page template/index.html",
     "_site/template/page template",
     "_site/template",
-    "template",
     "pages/home copy.md",
     "_site/static/img/logo 11.svg",
     "_site/static/img/logo 12.png",
