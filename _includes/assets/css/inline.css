@@ -196,7 +196,30 @@ pre {
 
 /* Header Logo (style as h2) */
 header {
-	padding: 1rem 0;
+	padding: 1rem var(--page-pad);
+}
+
+@media (max-width: 640px) {
+	:root {
+		--page-pad: 24px;
+	}
+	body {
+		padding-left: var(--page-pad);
+		padding-right: var(--page-pad);
+	}
+	header,
+	main,
+	footer {
+		padding-left: var(--page-pad) !important;
+		padding-right: var(--page-pad) !important;
+	}
+	header > em,
+	header nav,
+	main > *,
+	footer > * {
+		padding-left: var(--page-pad) !important;
+		padding-right: var(--page-pad) !important;
+	}
 }
 
 header > em {
