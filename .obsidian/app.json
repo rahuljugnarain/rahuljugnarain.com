@@ -1,4 +1,5 @@
 {
   "newFileLocation": "folder",
-  "newFileFolderPath": "pages"
+  "newFileFolderPath": "pages",
+  "alwaysUpdateLinks": true
 }

@@ -9,8 +9,13 @@ eleventyNavigation:
 ---
 # Rahul Jugnarain
 
-I'm currently a Senior PM at [Wise](https://wise.com/), living in London. 
+**Now**
+Senior Product Manager at [Wise](https://wise.com/), based in London. 
 
-Previously worked at [TrueLayer](https://truelayer.com/). 
+**Previously** 
+Product Manager at [TrueLayer](https://truelayer.com/), and [Publicis Sapient](https://www.publicissapient.com/). 
+***
 
-You can contact me through [LinkedIn](https://www.linkedin.com/in/jugnarain/) or email me at rahuljugnarain@gmail.com.
+**Reach out**: [LinkedIn](https://www.linkedin.com/in/jugnarain/) or [email](rahuljugnarain@gmail.com)
+
+

@@ -8,5 +8,9 @@ eleventyNavigation:
   order: 1
 layout: layouts/page.njk
 ---
+> Personal notes that might be helpful — slowly being ported over from my archive, any links leading to 404s are pages yet to be added. 
 
 
+## Current list 
+* [[get things done]]
+* [[supplements]]
